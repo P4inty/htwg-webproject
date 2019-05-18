@@ -6,14 +6,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="theme-color" content="#7886D7"/>
+    <meta name="theme-color" content="#7886D7" />
 
     <!-- Page Title -->
     <title>{{ site.title }}</title>
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="{{ site.data.links.css }}" />
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:500,600,700" rel="stylesheet" />
+    <!-- Defer Stylesheets -->
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Montserrat:500,600,700" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:500,600,700">
+    </noscript>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-xVVam1KS4+Qt2OrFa+VdRUoXygyKIuNWUUUBZYv+n27STsJ7oDOHJgfF0bNKLMJF" crossorigin="anonymous">
 </head>
