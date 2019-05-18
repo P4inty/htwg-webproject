@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Meta Tags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,27 +12,30 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="{{ site.data.links.css }}" />
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-xVVam1KS4+Qt2OrFa+VdRUoXygyKIuNWUUUBZYv+n27STsJ7oDOHJgfF0bNKLMJF" crossorigin="anonymous">
-  </head>
-  <body class="{{ page.background-class }}">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-xVVam1KS4+Qt2OrFa+VdRUoXygyKIuNWUUUBZYv+n27STsJ7oDOHJgfF0bNKLMJF" crossorigin="anonymous" />
+</head>
+
+<body class="{{ page.background-class }}">
     <div id="app">
-      <div class="columns is-centered">
-        <div class="column is-9">
-          <!-- Navbar -->
-          {% include navbar.html %}
+        <div class="columns is-centered">
+            <div class="column is-9">
+                <!-- Navbar -->
+                {% include navbar.html %}
 
-          <!-- Content -->
-          {{ content }}
+                <!-- Content -->
+                {{ content }}
+            </div>
         </div>
-      </div>
 
-      <!-- Footer -->
-      {% include footer.html %}
+        <!-- Footer -->
+        {% include footer.html %}
     </div>
-    
+
     <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
-  <script src="{{ site.data.links.js }}"></script>
-  </body>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    <script src="{{ site.data.links.js }}"></script>
+</body>
+
 </html>

@@ -1,5 +1,13 @@
 .has-bg-rectangle {
     background: url(../img/index_background.svg) no-repeat;
+    
+    @media (max-width: $desktop) {
+        background-size: 140% auto;
+    }
+
+    @media (max-width: 550px) {
+        background-size: 250% auto;
+    }
 }
 
 .has-text-weight-medium {
@@ -12,6 +20,7 @@
 
 .has-padding {
     padding: 1rem;
+
     &-large {
         padding: 3rem;
     }
@@ -24,6 +33,12 @@
 
 .has-margin-top {
     margin-top: 6rem;
+}
+
+.has-no-margin-mobile {
+    @media (max-width: $tablet) {
+        margin-top: 0px;
+    }
 }
 
 .has-margin-top-small {
@@ -46,6 +61,7 @@
     background: $light-green;
     border-color: $light-green;
     color: $white;
+
     &:hover {
         color: $white;
         background: darken($light-green, 10%);
@@ -58,6 +74,17 @@
     z-index: -1;
     left: 0;
     margin-top: 11rem;
+    @media (max-width: $tablet) {
+        & > img {
+            display: none;
+        }
+    }
+}
+
+.has-background-tablet {
+    @media (max-width: $tablet) {
+        background: $light;
+    }
 }
 
 .blue-element {
@@ -69,16 +96,28 @@
     margin: auto 0;
 }
 
-.control-left {
+.control {
     position: absolute;
     margin-top: 22%;
-    left: 10%;
-    color: #7B8E9D;
-}
+    color: $grey-lighter;
 
-.control-right {
-    position: absolute;
-    margin-top: 22%;
-    right: 10%;
-    color: #7B8E9D;
+    @media (max-width: $tablet) {
+        margin-top: 40%;
+    }
+
+    &-right {
+        @extend .control;
+        right: 10%;
+        @media (max-width: $tablet) {
+            right: 10px
+        }
+    }
+
+    &-left {
+        @extend .control;
+        left: 10%;
+        @media (max-width: $tablet) {
+            left: 10px
+        }
+    }
 }

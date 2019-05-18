@@ -1,89 +1,39 @@
 <section class="section has-margin-top" id="carousel">
-  <h3 class="title has-text-centered">Unsere Topseller</h3>
-  <!-- Controls -->
-  <a class="control-left" @click="left()">
-    <i class="fal fa-chevron-left fa-4x"></i>
-  </a>
-  <a class="control-right" @click="right()">
-    <i class="fal fa-chevron-right fa-4x"></i>
-  </a>
+    <h3 class="title has-text-centered">Unsere Topseller</h3>
+    <!-- Controls -->
+    <a class="control-left no-arrow" @click="left()">
+        <i class="fal fa-chevron-left fa-4x"></i>
+    </a>
+    <a class="control-right no-arrow" @click="right()">
+        <i class="fal fa-chevron-right fa-4x"></i>
+    </a>
 
-  <!-- Frist Slide -->
-  <div class="columns has-margin-top" v-bind:class="{ 'is-hidden': slides[0] }">
-    <div class="column">
-      <figure class="image has-padding-large">
-        <img src="https://via.placeholder.com/250" alt="" />
-      </figure>
-    </div>
-    <div class="column product-preview-text">
-      <p class="has-text-success is-uppercase is-size-3">Lactohelp</p>
-      <p class="has-text-grey-lighter">Artikelnummer: 105385-34</p>
-      <p class="has-margin-top-small">
-        A wonderful serenity has taken possession of my entire soul, like these
-        sweet mornings of spring which I enjoy with my whole <span v-bind:class="{ 'is-hidden': !hideMore }">...</span>
-      </p>
-      <p v-bind:class="{ 'is-hidden': hideMore }">
-            Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
-      </p>
-      <div class="field has-padding-top">
-        <button class="button is-primary has-box-shadow is-medium has-text-weight-semibold" style="margin-right: 1rem" @click="hideMore = !hideMore">
-          Mehr anzeigen
-        </button>
-        <a href="#"
-          class="button is-primary has-box-shadow is-inverted is-medium has-text-weight-semibold">Produktseite</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Second Slide -->
-  <div class="columns has-margin-top" v-bind:class="{ 'is-hidden': slides[1] }">
-    <div class="column">
-        <figure class="image has-padding-large">
-        <img src="https://via.placeholder.com/250" alt="" />
-        </figure>
-    </div>
-    <div class="column product-preview-text">
-        <p class="has-text-success is-uppercase is-size-3">HairHelp</p>
-        <p class="has-text-grey-lighter">Artikelnummer: 105385-34</p>
-        <p class="has-margin-top-small">
-        A wonderful serenity has taken possession of my entire soul, like these
-        sweet mornings of spring which I enjoy with my whole ...
-        </p>
-        <div class="field has-padding-top">
-        <a
-            href="#"
-            class="button is-primary has-box-shadow is-medium has-text-weight-semibold"
-            style="margin-right: 1rem">Mehr anzeigen</a>
-        <a
-            href="#"
-            class="button is-primary has-box-shadow is-inverted is-medium has-text-weight-semibold">Produktseite</a>
+    <!-- Frist Slide -->
+    <div class="columns has-margin-top has-no-margin-mobile" v-bind:class="{ 'is-hidden': slides[0] }">
+        <div class="column">
+            <figure class="image has-padding-large">
+                <img src="https://via.placeholder.com/250" alt="" />
+            </figure>
         </div>
-    </div>
-    </div>
-
-    <!-- Third Slide -->
-<div class="columns has-margin-top" v-bind:class="{ 'is-hidden': slides[2] }">
-    <div class="column">
-        <figure class="image has-padding-large">
-        <img src="https://via.placeholder.com/250" alt="" />
-        </figure>
-    </div>
-    <div class="column product-preview-text">
-        <p class="has-text-success is-uppercase is-size-3">Glutenhelp</p>
-        <p class="has-text-grey-lighter">Artikelnummer: 105385-34</p>
-        <p class="has-margin-top-small">
-        A wonderful serenity has taken possession of my entire soul, like these
-        sweet mornings of spring which I enjoy with my whole ...
-        </p>
-        <div class="field has-padding-top">
-        <a
-            href="#"
-            class="button is-primary has-box-shadow is-medium has-text-weight-semibold"
-            style="margin-right: 1rem">Mehr anzeigen</a>
-        <a
-            href="#"
-            class="button is-primary has-box-shadow is-inverted is-medium has-text-weight-semibold">Produktseite</a>
+        <div class="column product-preview-text">
+            <p class="has-text-success is-uppercase is-size-3">Lactohelp</p>
+            <p class="has-text-grey-lighter">Artikelnummer: 105385-34</p>
+            <p class="has-margin-top-small">
+                A wonderful serenity has taken possession of my entire soul, like these
+                sweet mornings of spring which I enjoy with my whole <span
+                    v-bind:class="{ 'is-hidden': !hideMore }">...</span>
+            </p>
+            <p v-bind:class="{ 'is-hidden': hideMore }">
+                Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
+                blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language
+                ocean.
+            </p>
+            <div class="buttons has-padding-top">
+                <button class="button is-primary has-box-shadow is-medium" @click="showMore">
+                    {% raw %}{{ button }}{% endraw %}
+                </button>
+                <a href="#" class="button is-primary has-box-shadow is-inverted is-medium no-arrow">Produktseite</a>
+            </div>
         </div>
-    </div>
     </div>
 </section>

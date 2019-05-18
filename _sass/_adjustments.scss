@@ -1,5 +1,24 @@
 .navbar-end > .navbar-item {
   padding: 0.5rem 2rem;
+  font-weight: 800;
+  &::after {
+    content: "";
+    height: 4px;
+    border-radius: 1rem;
+    width: 100%;
+    background: $white;
+    position: absolute;
+    top: 70%;
+    left: 0%;
+    opacity: 0;
+  }
+  &:hover {
+      color: $white;
+      &::after {
+          opacity: 1;
+          transition: opacity 1s;
+      }
+  }
 }
 
 .navbar-brand > .navbar-item {
@@ -35,8 +54,49 @@ p {
     margin: 1rem 0;
 }
 
+.button {
+    margin-right: 1rem;
+    &:hover {
+        transition: all 1s;
+    }
+}
+
+button {
+    font-weight: 600;
+}
+
+a {
+    color: $primary;
+    font-weight: 600;
+    &::after {
+        content: " →";
+    }
+    &:hover {
+        color: darken($primary, 10%);
+        transition: color .5s;
+    }
+    &.no-arrow {
+        &::after {
+            content: "";
+        }
+    }
+}
+
 .navbar-menu {
     background: transparent;
     box-shadow: none;
     text-align: center;
+    &.is-active {
+        .navbar-item {
+            background: transparent;
+        }
+    }
+}
+
+.is-uppercase {
+    color: $success;
+    font-weight: 600;
+}
+body {
+    overflow: hidden;
 }
