@@ -69,7 +69,9 @@ a {
     color: $primary;
     font-weight: 600;
     &::after {
-        content: " →";
+        font-family: "Font Awesome 5 Pro";
+        font-weight: 900;
+        content: " \f178";
     }
     &:hover {
         color: darken($primary, 10%);
