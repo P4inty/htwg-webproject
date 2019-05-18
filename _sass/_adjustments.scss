@@ -1,0 +1,36 @@
+.navbar-end > .navbar-item {
+  padding: 0.5rem 2rem;
+}
+
+.navbar-brand > .navbar-item {
+  & > p {
+    padding-left: 1rem;
+  }
+  & > img {
+      height: $navbar-height;
+      max-height: none;
+  }
+}
+
+.is-transparent {
+    background: transparent;
+}
+
+.title {
+    font-weight: 500;
+    color: #606F7B;
+}
+
+.icon.is-large {
+    height: 10rem;
+}
+
+p {
+    color: #7B8E9D;
+    font-weight: 500;
+}
+
+.footer a {
+    display: block;
+    margin: 1rem 0;
+}

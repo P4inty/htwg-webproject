@@ -1,1 +1,5 @@
 css: ./assets/css/app.css
+img:
+  logo: ./assets/img/logo.svg
+  grey-element: ./assets/img/index_element.svg
+  blue-element: ./assets/img/index_blue_element.svg
