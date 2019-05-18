@@ -1,4 +1,5 @@
 css: ./assets/css/app.css
+js: ./assets/js/main.js
 img:
   logo: ./assets/img/logo.svg
   grey-element: ./assets/img/index_element.svg

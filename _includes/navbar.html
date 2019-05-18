@@ -1,21 +1,38 @@
-<nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="/">
-        <img src="{{ site.data.links.img.logo }}" alt="Das Logo von AllergyAid.">
-        <p class="has-text-weight-bold has-text-white is-size-4">AllergyAid</p>
-      </a>
-  
-      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div>
-    
+<nav
+  class="navbar is-transparent"
+  aria-label="main navigation"
+  id="navbar"
+>
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/">
+      <img
+        src="{{ site.data.links.img.logo }}"
+        alt="Das Logo von AllergyAid."
+      />
+      <p class="has-text-weight-bold has-text-white is-size-4">AllergyAid</p>
+    </a>
+
+    <a
+      role="button"
+      class="navbar-burger"
+      aria-label="menu"
+      aria-expanded="false"
+      data-target="navbar-menu"
+      @click="isActive = !isActive"
+      v-bind:class="{ 'is-active': isActive }"
+    >
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div class="navbar-menu" id="navbar-menu" v-bind:class="{ 'is-active': isActive }">
     <div class="navbar-end">
-        <a class="navbar-item has-text-weight-bold" href="#">Shop</a>
-        <a class="navbar-item has-text-weight-bold" href="#">Wir</a>
-        <a class="navbar-item has-text-weight-bold" href="#">News</a>
-        <a class="navbar-item has-text-weight-bold" href="#">Kontakt</a>
+      <a class="navbar-item has-text-weight-bold" href="#">Shop</a>
+      <a class="navbar-item has-text-weight-bold" href="#">Wir</a>
+      <a class="navbar-item has-text-weight-bold" href="#">News</a>
+      <a class="navbar-item has-text-weight-bold" href="#">Kontakt</a>
     </div>
-  </nav>
+  </div>
+</nav>
