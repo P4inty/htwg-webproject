@@ -1,5 +1,6 @@
 .has-bg-rectangle {
     background: url(../img/index_background.svg) no-repeat;
+    background-size: 100%;
     
     @media (max-width: $desktop) {
         background-size: 140% auto;
@@ -74,6 +75,9 @@
     z-index: -1;
     left: 0;
     margin-top: 11rem;
+    & > img {
+        min-width: 100%;
+    }
     @media (max-width: $tablet) {
         & > img {
             display: none;
@@ -90,6 +94,7 @@
 .blue-element {
     position: absolute;
     left: 0;
+    min-width: 100%;
 }
 
 .product-preview-text {
