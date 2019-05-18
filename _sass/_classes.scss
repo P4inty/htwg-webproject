@@ -75,6 +75,7 @@
     z-index: -1;
     left: 0;
     margin-top: 11rem;
+    min-width: 100%;
     & > img {
         min-width: 100%;
     }
@@ -95,6 +96,9 @@
     position: absolute;
     left: 0;
     min-width: 100%;
+    & > img {
+        min-width: 100%;
+    }
 }
 
 .product-preview-text {
