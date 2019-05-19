@@ -126,3 +126,17 @@
         }
     }
 }
+
+.disclaimer {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    width: 30%;
+    height: auto;
+    background: $primary;
+    padding: 2%;
+    border-radius: 3px;
+    @media (max-width: $tablet) {
+        width: calc(100% - 2rem);
+    }
+}

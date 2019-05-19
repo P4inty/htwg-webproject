@@ -1,0 +1,9 @@
+<div class="disclaimer" id="disclaimer" v-if="show">
+    <p class="has-text-white">Diese Seite möchte Cookies verwenden um Ihnen diverse Funktionsweisen bieten zu können.
+    </p>
+    <a href="#" class="has-text-white has-margin-top-small is-block">Mehr Infos</a>
+    <div class="buttons has-margin-top-small">
+        <button class="button is-success is-inverted has-box-shadow" @click="accept(true)">Akzeptieren</button>
+        <button class="button is-primary is-inverted has-box-shadow" @click="accept(false)">Ablehnen</button>
+    </div>
+</div>
