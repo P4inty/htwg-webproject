@@ -9,7 +9,7 @@
     </a>
 
     <!-- Frist Slide -->
-    <div class="columns has-margin-top has-no-margin-mobile" v-bind:class="{ 'is-hidden': slides[0] }">
+    <div class="columns has-margin-top has-no-margin-mobile" :class="{ 'is-hidden': slides[0] }">
         <div class="column">
             <figure class="image has-padding-large">
                 <img src="{{ site.data.links.img.product-1 }}" alt="Produkt Bild von Lactohelp." />
@@ -21,8 +21,8 @@
             <p class="has-margin-top-small">
                 Mit LactoHelp können Sie Ihr Wohlbefinden steigern und müssen Ihre Essgewohnheiten nicht einschränken.
                 Das in den Kaspeln enthaltene Enzym Lactase
-                <span v-bind:class="{ 'is-hidden': !hideMore }">...</span>
-                <span v-bind:class="{ 'is-hidden': hideMore }">
+                <span :class="{ 'is-hidden': !hideMore }">...</span>
+                <span class="is-hidden" :class="{ 'unhide': !hideMore }">
                     sorgt für die Spaltung des Milchzuckers und Funktionsübernahme der mangelnden Lactase im eigenen
                     Körper. Somit kann nach der Einnahme jede beliebige Mahlzeit konsumiert werden ohne Angst vor den
                     üblichen
@@ -38,7 +38,7 @@
         </div>
     </div>
     <!-- Second Slide -->
-    <div class="columns has-margin-top has-no-margin-mobile" v-bind:class="{ 'is-hidden': slides[1] }">
+    <div class="columns has-margin-top has-no-margin-mobile" :class="{ 'is-hidden': slides[1] }">
         <div class="column">
             <figure class="image has-padding-large">
                 <img src="{{ site.data.links.img.product-2 }}" alt="Produkt Bild von PollBlock" />
@@ -50,8 +50,8 @@
             <p class="has-margin-top-small">
                 Wenn Sie die Symptome Ihrer Pollenallergie Leid sind, probieren Sie unser Produkt PollBlock aus.
                 Es behindert die Freisetzung von Histamin und anderen Entzündungsstoffen
-                <span v-bind:class="{ 'is-hidden': !hideMore }">...</span>
-                <span v-bind:class="{ 'is-hidden': hideMore }">
+                <span :class="{ 'is-hidden': !hideMore }">...</span>
+                <span class="is-hidden" :class="{ 'unhide': !hideMore }">
                     aus den Immunzellen, die bei der Allergie eine maßgebliche Rolle spielen.
                     So können Sie die Zeit an der frischen Luft genießen ohne übliche Beschwerden.
                 </span>
@@ -65,7 +65,7 @@
         </div>
     </div>
     <!-- Third Slide -->
-    <div class="columns has-margin-top has-no-margin-mobile" v-bind:class="{ 'is-hidden': slides[2] }">
+    <div class="columns has-margin-top has-no-margin-mobile" :class="{ 'is-hidden': slides[2] }">
         <div class="column">
             <figure class="image has-padding-large">
                 <img src="{{ site.data.links.img.product-3 }}" alt="Produkt Bild von HairResist" />
@@ -77,9 +77,8 @@
             <p class="has-margin-top-small">
                 Müssen Sie in Gegenwart Ihrer Haustiere ständig nießen? Dann empfehlen wir Ihnen unser Produkt
                 HairResist. Es bekämpft schnell und umfassend die Allergiesymptome
-
-                <span v-bind:class="{ 'is-hidden': !hideMore }">...</span>
-                <span v-bind:class="{ 'is-hidden': hideMore }">
+                <span :class="{ 'is-hidden': !hideMore }">...</span>
+                <span class="is-hidden" :class="{ 'unhide': !hideMore }">
                     und wirkt bei nur bei einmal täglicher
                     Einnahme bis zu 24 Stunden.
                     Damit können Sie wieder unbesorgt mit Ihren Haustieren Zeit verbringen.
