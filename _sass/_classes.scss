@@ -127,6 +127,10 @@
     }
 }
 
+.has-same-height > .column .box{
+    height: 100%;
+}
+
 .disclaimer {
     position: fixed;
     bottom: 1rem;
