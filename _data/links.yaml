@@ -4,3 +4,6 @@ img:
   logo: ./assets/img/logo.svg
   grey-element: ./assets/img/index_element.svg
   blue-element: ./assets/img/index_blue_element.svg
+  product-1: ./assets/img/product_1.png
+  product-2: ./assets/img/product_2.png
+  product-3: ./assets/img/product_3.png
