@@ -1,7 +1,7 @@
 <div class="disclaimer is-hidden" id="disclaimer" :class="{ unhide: show }">
     <p class="has-text-white">Diese Seite möchte Cookies verwenden um Ihnen diverse Funktionsweisen bieten zu können.
     </p>
-    <a href="#" class="has-text-white has-margin-top-small is-block">Mehr Infos</a>
+    <a href="{{ site.data.links.urls.privacy }}" class="has-text-white has-margin-top-small is-block">Mehr Infos</a>
     <div class="buttons has-margin-top-small">
         <button class="button is-success is-inverted has-box-shadow" @click="accept(true)">Akzeptieren</button>
         <button class="button is-primary is-inverted has-box-shadow" @click="accept(false)">Ablehnen</button>
