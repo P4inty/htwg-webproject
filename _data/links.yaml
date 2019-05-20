@@ -7,3 +7,8 @@ img:
   product-1: ./assets/img/product_1.png
   product-2: ./assets/img/product_2.png
   product-3: ./assets/img/product_3.png
+
+urls:
+  contact: /contact
+  imprint: /imprint
+  privacy: /privacy

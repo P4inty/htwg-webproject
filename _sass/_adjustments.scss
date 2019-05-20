@@ -101,4 +101,9 @@ a {
 }
 body {
     overflow: hidden;
+    color: #647687;
+}
+
+.control input:focus ~ .icon {
+    color: $primary !important;
 }

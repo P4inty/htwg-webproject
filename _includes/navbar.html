@@ -1,4 +1,4 @@
-<nav class="navbar is-transparent" aria-label="main navigation" id="navbar">
+<nav class="navbar is-transparent {{ page.navbar-class }}" aria-label="main navigation" id="navbar">
     <div class="navbar-brand">
         <a class="navbar-item no-arrow" href="/">
             <img src="{{ site.data.links.img.logo }}" alt="Das Logo von AllergyAid." />
@@ -18,7 +18,7 @@
             <a class="navbar-item" href="#">Shop</a>
             <a class="navbar-item" href="#">Wir</a>
             <a class="navbar-item" href="#">News</a>
-            <a class="navbar-item" href="#">Kontakt</a>
+            <a class="navbar-item" href="{{ site.data.links.urls.contact }}">Kontakt</a>
         </div>
     </div>
 </nav>

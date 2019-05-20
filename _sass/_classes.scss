@@ -101,7 +101,7 @@
     margin: auto 0;
 }
 
-.control {
+.controls {
     position: absolute;
     margin-top: 22%;
     color: $grey-lighter;
@@ -111,7 +111,7 @@
     }
 
     &-right {
-        @extend .control;
+        @extend .controls;
         right: 10%;
         @media (max-width: $tablet) {
             right: 10px
@@ -119,7 +119,7 @@
     }
 
     &-left {
-        @extend .control;
+        @extend .controls;
         left: 10%;
         @media (max-width: $tablet) {
             left: 10px
@@ -142,5 +142,21 @@
     border-radius: 3px;
     @media (max-width: $tablet) {
         width: calc(100% - 2rem);
+    }
+}
+
+.navbar-background {
+    background: linear-gradient(90deg, #91A1FD -0.8%, $primary 98.89%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: $navbar-height + 1rem;
+}
+
+.is-slim > .navbar-menu.is-active .navbar-item {
+    color: #606F7B;
+    &::after {
+        background: #606F7B;
     }
 }
