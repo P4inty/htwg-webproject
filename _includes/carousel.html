@@ -24,7 +24,65 @@
                 <span v-bind:class="{ 'is-hidden': !hideMore }">...</span>
                 <span v-bind:class="{ 'is-hidden': hideMore }">
                     sorgt für die Spaltung des Milchzuckers und Funktionsübernahme der mangelnden Lactase im eigenen
-                    Körper. Somit kann nach der Einnahme jede beliebige Mahlzeit konsumiert werden ohne Angst vor den üblichen
+                    Körper. Somit kann nach der Einnahme jede beliebige Mahlzeit konsumiert werden ohne Angst vor den
+                    üblichen
+                    Beschwerden zu haben.
+                </span>
+            </p>
+            <div class="buttons has-padding-top">
+                <button class="button is-primary has-box-shadow is-medium" @click="showMore">
+                    {% raw %}{{ button }}{% endraw %}
+                </button>
+                <a href="#" class="button is-primary has-box-shadow is-inverted is-medium no-arrow">Produktseite</a>
+            </div>
+        </div>
+    </div>
+    <!-- Second Slide -->
+    <div class="columns has-margin-top has-no-margin-mobile" v-bind:class="{ 'is-hidden': slides[1] }">
+        <div class="column">
+            <figure class="image has-padding-large">
+                <img src="https://via.placeholder.com/250" alt="" />
+            </figure>
+        </div>
+        <div class="column product-preview-text">
+            <p class="has-text-success is-uppercase is-size-3">PollBlock</p>
+            <p class="has-text-grey-lighter">Artikelnummer: 107253-96</p>
+            <p class="has-margin-top-small">
+                Mit LactoHelp können Sie Ihr Wohlbefinden steigern und ohne dass Ihre Essgewohnheiten einschränkt sind.
+                Das in den Kaspeln enthaltene Enzym Lactase
+                <span v-bind:class="{ 'is-hidden': !hideMore }">...</span>
+                <span v-bind:class="{ 'is-hidden': hideMore }">
+                    sorgt für die Spaltung des Milchzuckers und Funktionsübernahme der mangelnden Lactase im eigenen
+                    Körper. Somit kann nach der Einnahme jede beliebige Mahlzeit konsumiert werden ohne Angst vor den
+                    üblichen Beschwerden zu haben.
+                </span>
+            </p>
+            <div class="buttons has-padding-top">
+                <button class="button is-primary has-box-shadow is-medium" @click="showMore">
+                    {% raw %}{{ button }}{% endraw %}
+                </button>
+                <a href="#" class="button is-primary has-box-shadow is-inverted is-medium no-arrow">Produktseite</a>
+            </div>
+        </div>
+    </div>
+    <!-- Third Slide -->
+    <div class="columns has-margin-top has-no-margin-mobile" v-bind:class="{ 'is-hidden': slides[2] }">
+        <div class="column">
+            <figure class="image has-padding-large">
+                <img src="https://via.placeholder.com/250" alt="" />
+            </figure>
+        </div>
+        <div class="column product-preview-text">
+            <p class="has-text-success is-uppercase is-size-3">HairResist</p>
+            <p class="has-text-grey-lighter">Artikelnummer: 101052-32</p>
+            <p class="has-margin-top-small">
+                Mit LactoHelp kannst du dein Wohlbefinden steigern und musst deine Essgewohnheiten nicht einschränken.
+                Das in den Kaspeln enthaltene Enzym Lactase
+                <span v-bind:class="{ 'is-hidden': !hideMore }">...</span>
+                <span v-bind:class="{ 'is-hidden': hideMore }">
+                    sorgt für die Spaltung des Milchzuckers und Funktionsübernahme der mangelnden Lactase im eigenen
+                    Körper. Somit kann nach der Einnahme jede beliebige Mahlzeit konsumiert werden ohne Angst vor den
+                    üblichen
                     Beschwerden zu haben.
                 </span>
             </p>
