@@ -12,6 +12,6 @@ img:
   woman: ./assets/img/woman.svg
 
 urls:
-  contact: /contact
-  imprint: /imprint
-  privacy: /privacy
+  contact: ./contact.html
+  imprint: ./imprint.html
+  privacy: ./privacy.html
