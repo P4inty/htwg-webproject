@@ -1,7 +1,7 @@
 .has-bg-rectangle {
     background: url(../img/index_background.svg) no-repeat;
     background-size: 100%;
-    
+
     @media (max-width: $desktop) {
         background-size: 140% auto;
     }
@@ -72,11 +72,13 @@
     left: 0;
     margin-top: 11rem;
     min-width: 100%;
-    & > img {
+
+    &>img {
         min-width: 100%;
     }
+
     @media (max-width: $tablet) {
-        & > img {
+        &>img {
             display: none;
         }
     }
@@ -92,7 +94,8 @@
     position: absolute;
     left: 0;
     min-width: 100%;
-    & > img {
+
+    &>img {
         min-width: 100%;
     }
 }
@@ -113,6 +116,7 @@
     &-right {
         @extend .controls;
         right: 10%;
+
         @media (max-width: $tablet) {
             right: 10px
         }
@@ -121,13 +125,14 @@
     &-left {
         @extend .controls;
         left: 10%;
+
         @media (max-width: $tablet) {
             left: 10px
         }
     }
 }
 
-.has-same-height > .column .box{
+.has-same-height>.column .box {
     height: 100%;
 }
 
@@ -140,6 +145,7 @@
     background: $primary;
     padding: 2%;
     border-radius: 3px;
+
     @media (max-width: $tablet) {
         width: calc(100% - 2rem);
     }
@@ -154,8 +160,9 @@
     height: $navbar-height + 1rem;
 }
 
-.is-slim > .navbar-menu.is-active .navbar-item {
+.is-slim>.navbar-menu.is-active .navbar-item {
     color: #606F7B;
+
     &::after {
         background: #606F7B;
     }
@@ -167,4 +174,36 @@
 
 .woman-element {
     max-height: 40rem;
+}
+
+.is-hover-black {
+    &::before {
+        content: "";
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        background-color: black;
+        opacity: 0;
+        transition: opacity 0.1s linear;
+    }
+    > .hover-content {
+        position: absolute;
+        left: 50%;
+        top: 40%;
+        opacity: 0;
+        transition: opacity 0.1s linear;
+        > div {
+            position: relative;
+            left: -50%;
+            top: -40%;
+        }
+    }
+    &:hover {
+        &::before {
+            opacity: 0.7;
+        }
+        > .hover-content {
+            opacity: 1;
+        }
+    }
 }

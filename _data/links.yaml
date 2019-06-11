@@ -10,8 +10,16 @@ img:
   product-2: ./assets/img/product_2.png
   product-3: ./assets/img/product_3.png
   woman: ./assets/img/woman.svg
+  person-1: ./assets/img/person_1.jpg
+  person-2: ./assets/img/person_2.jpg
+  person-3: ./assets/img/person_3.jpg
+  person-4: ./assets/img/person_4.jpg
+  person-5: ./assets/img/person_5.jpg
+  person-6: ./assets/img/person_6.jpg
+  company: ./assets/img/company.svg
 
 urls:
   contact: ./contact.html
+  about: ./about.html
   imprint: ./imprint.html
   privacy: ./privacy.html
