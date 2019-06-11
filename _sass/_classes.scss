@@ -176,6 +176,15 @@
     max-height: 40rem;
 }
 
+.is-smaller-responsive {
+    @media (max-width: 1111px) {
+        font-size: .75rem;
+    }
+    @media (max-width: $tablet) {
+        font-size: 1rem;
+    }
+}
+
 .is-hover-black {
     &::before {
         content: "";
@@ -192,10 +201,22 @@
         top: 40%;
         opacity: 0;
         transition: opacity 0.1s linear;
+        @media (max-width: 1111px) {
+            top: 30%;
+        }
+        @media (max-width: $tablet) {
+            top: 40%;
+        }
         > div {
             position: relative;
             left: -50%;
             top: -40%;
+            @media (max-width: 1111px) {
+                top: -30%;
+            }
+            @media (max-width: $tablet) {
+                top: 40%;
+            }
         }
     }
     &:hover {
