@@ -180,6 +180,7 @@
     @media (max-width: 1111px) {
         font-size: .75rem;
     }
+
     @media (max-width: $tablet) {
         font-size: 1rem;
     }
@@ -195,36 +196,48 @@
         opacity: 0;
         transition: opacity 0.1s linear;
     }
-    > .hover-content {
+
+    >.hover-content {
         position: absolute;
         left: 50%;
         top: 40%;
         opacity: 0;
         transition: opacity 0.1s linear;
+
         @media (max-width: 1111px) {
             top: 30%;
         }
+
         @media (max-width: $tablet) {
             top: 40%;
         }
-        > div {
+
+        >div {
             position: relative;
             left: -50%;
             top: -40%;
+
             @media (max-width: 1111px) {
                 top: -30%;
             }
+
             @media (max-width: $tablet) {
                 top: 40%;
             }
         }
     }
+
     &:hover {
         &::before {
             opacity: 0.7;
         }
-        > .hover-content {
+
+        >.hover-content {
             opacity: 1;
         }
     }
+}
+
+.is-full-height {
+    height: 100%;
 }

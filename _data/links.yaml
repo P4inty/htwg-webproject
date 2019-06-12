@@ -1,11 +1,11 @@
-css: ./assets/css/app.css
-js: ./assets/js/main.js
-carousel-js: ./assets/js/carousel.js
-font-awesome: ./assets/css/font-awesome.min.css
+css: /assets/css/app.css
+js: /assets/js/main.js
+carousel-js: /assets/js/carousel.js
+font-awesome: /assets/css/font-awesome.min.css
 img:
-  logo: ./assets/img/logo.svg
-  grey-element: ./assets/img/index_element.svg
-  blue-element: ./assets/img/index_blue_element.svg
+  logo: /assets/img/logo.svg
+  grey-element: /assets/img/index_element.svg
+  blue-element: /assets/img/index_blue_element.svg
   product-1: ./assets/img/product_1.png
   product-2: ./assets/img/product_2.png
   product-3: ./assets/img/product_3.png
@@ -17,10 +17,13 @@ img:
   person-5: ./assets/img/person_5.jpg
   person-6: ./assets/img/person_6.jpg
   company: ./assets/img/company.svg
+  news-1: /assets/img/news_1.jpg
+  news-2: /assets/img/news_2.jpg
+  news-3: /assets/img/news_3.jpg
 
 urls:
-  contact: ./contact.html
-  about: ./about.html
-  imprint: ./imprint.html
-  privacy: ./privacy.html
-  news: ./news.html
+  contact: /contact.html
+  about: /about.html
+  imprint: /imprint.html
+  privacy: /privacy.html
+  news: /news.html
