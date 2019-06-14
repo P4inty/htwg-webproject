@@ -2,6 +2,7 @@
 layout: app
 background-class: "has-bg-rectangle"
 javascript: <script defer src="./assets/js/carousel.js"></script>
+<script defer src="./assets/js/cookie.js"></script>
 ---
 <section class="hero is-medium">
     <div class="hero-body columns">
@@ -13,13 +14,16 @@ javascript: <script defer src="./assets/js/carousel.js"></script>
                 unbeschwert und uneingeschränkt genießen zu können.
             </p>
             <div class="buttons has-padding-top">
-                <a href="{{ site.data.links.urls.contact }}" class="button is-light-green has-box-shadow is-medium no-arrow">Kontakt</a>
-                <a href="{{ site.data.links.urls.about }}" class="button is-primary has-box-shadow is-inverted is-medium no-arrow">AllergyAid</a>
+                <a href="{{ site.data.links.urls.contact }}"
+                    class="button is-light-green has-box-shadow is-medium no-arrow">Kontakt</a>
+                <a href="{{ site.data.links.urls.about }}"
+                    class="button is-primary has-box-shadow is-inverted is-medium no-arrow">AllergyAid</a>
             </div>
         </div>
         <div class="column">
             <figure class="image">
-                <img src="{{ site.data.links.img.woman }}" class="woman-element" alt="Glückliche Frau mit einer Wolke im Hintergrund">
+                <img src="{{ site.data.links.img.woman }}" class="woman-element"
+                    alt="Glückliche Frau mit einer Wolke im Hintergrund">
             </figure>
         </div>
     </div>
@@ -29,7 +33,7 @@ javascript: <script defer src="./assets/js/carousel.js"></script>
     <img src="{{ site.data.links.img.grey-element }}" alt="Graues Hintergrundelement">
 </div>
 
-<section class="section has-background-tablet">
+<section class="section has-background-tablet" id="cookie">
     <h2 class="title has-text-centered">Wobei wir Ihnen helfen</h2>
     <div class="columns has-margin-top is-desktop has-no-margin-mobile has-same-height">
         <div class="column">
@@ -43,7 +47,7 @@ javascript: <script defer src="./assets/js/carousel.js"></script>
                 <p class="has-margin-y">Wenn das Haustier plötzlich allergische Reaktionen hervorruft, ist das erst mal
                     ein Schock. Schließlich stellt sich die Frage, wie das Zusammenleben weitergehen soll. Mit unseren
                     Produkten ist es möglich.</p>
-                <a href="#">Mehr Infos</a>
+                <a href="{{ site.data.links.urls.shop }}" @click="setCookie('query', 'Tierhaar')">Mehr Infos</a>
             </div>
         </div>
         <div class="column">
@@ -57,7 +61,7 @@ javascript: <script defer src="./assets/js/carousel.js"></script>
                 <p class="has-margin-y">So sehr wir den Frühling herbeisehnen, beginnt für viele dann eine unangenehme
                     Jahreszeit. Die Pollen machen vielen Allergikern das Leben schwer, doch es gibt Möglichkeiten
                     dagegen vorzugehen.</p>
-                <a href="#">Mehr Infos</a>
+                <a href="{{ site.data.links.urls.shop }}" @click="setCookie('query', 'Pollen')">Mehr Infos</a>
             </div>
         </div>
         <div class="column">
@@ -71,7 +75,7 @@ javascript: <script defer src="./assets/js/carousel.js"></script>
                 <p class="has-margin-y">Milchprodukte sind sehr gesund und werden gern als wichtiger Bestandteil einer
                     ausgewogenen Ernährung empfohlen. Doch diese Nahrung löst bei manchen Menschen eine
                     Unverträglichkeit aus.</p>
-                <a href="#">Mehr Infos</a>
+                <a href="{{ site.data.links.urls.shop }}" @click="setCookie('query', 'Laktose')">Mehr Infos</a>
             </div>
         </div>
     </div>

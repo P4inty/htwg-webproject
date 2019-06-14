@@ -34,11 +34,17 @@ var search = new Vue({
         ],
     },
     computed: {
-        searchedProducts: function () {
+        searchedProducts() {
             return this.products.filter(product => {
                 return product.title.toLowerCase().includes(this.search.toLowerCase()) ||
                     product.category.toLowerCase().includes(this.search.toLowerCase());
             })
+        }
+    },
+    beforeMount() {
+        if($cookies.isKey('query')) {
+            this.search = $cookies.get('query');
+            $cookies.remove('query');
         }
     }
 });

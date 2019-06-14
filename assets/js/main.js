@@ -11,13 +11,13 @@ var disclaimer = new Vue({
         show: true,
     },
     methods: {
-        accept: function(accept) {
+        accept(accept) {
             $cookies.config('365d');
             $cookies.set('cookie_disclaimer', accept);
             this.show = false;
         }
     },
-    beforeMount: function() {
+    beforeMount() {
         if($cookies.isKey('cookie_disclaimer')) {
             this.show = false;
         }

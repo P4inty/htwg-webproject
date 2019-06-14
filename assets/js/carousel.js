@@ -6,15 +6,15 @@ var carousel = new Vue({
         button: "Mehr anzeigen"
     },
     methods: {
-        left: function() {
+        left() {
             this.hideMore = true;
             this.slides.push(this.slides.shift());
         },
-        right: function() {
+        right() {
             this.hideMore = true;
             this.slides.unshift(this.slides.pop());
         },
-        showMore: function() {
+        showMore() {
             this.hideMore ? this.button = "Weniger anzeigen" : this.button = "Mehr anzeigen";
             this.hideMore = !this.hideMore;
         }
