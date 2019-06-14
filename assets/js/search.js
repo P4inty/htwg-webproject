@@ -16,19 +16,19 @@ var search = new Vue({
             new Product(
                 'Lactohelp',
                 'assets/img/product_1.png',
-                '#',
+                '1',
                 'Laktose Prävention'
             ),
             new Product(
                 'Pollblock',
                 'assets/img/product_2.png',
-                '#',
+                '2',
                 'Pollen'
             ),
             new Product(
                 'Hairresist',
                 'assets/img/product_3.png',
-                '#',
+                '3',
                 'Tierhaare'
             )
         ],

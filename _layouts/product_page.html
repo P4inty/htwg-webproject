@@ -1,0 +1,23 @@
+---
+layout: app
+navbar-class: is-slim
+---
+<div class="navbar-background"></div>
+<section class="section">
+    <div class="columns">
+        <div class="column is-4">
+            <figure class="image">
+                <img src="{{ page.product_img }}" alt="{{ page.product_name }}">
+            </figure>
+            <div class="has-text-centered has-margin-top-small">
+                <a href="{{ site.data.links.urls.shop }}" class="button is-primary is-medium no-arrow">Zurück</a>
+            </div>
+        </div>
+        <div class="column">
+            <h1 class="title is-uppercase">{{ page.product_name }}</h1>
+            <p class="subtitle has-text-grey-lighter">Artikelnummer: {{ page.product_id }}</p>
+            <div class="is-divider has-margin-top" data-content="Beschreibung"></div>
+            {{ content }}
+        </div>
+    </div>
+</section>

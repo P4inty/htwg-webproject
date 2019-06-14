@@ -44,7 +44,7 @@ javascript: <script defer src="/assets/js/search.js"></script>
                 <div class="columns has-margin-top is-multiline">
                     {% raw %}
                     <div class="column is-4-desktop is-marginless" v-for="product in searchedProducts">
-                        <a :href="product.link" class="box is-full-height no-arrow">
+                        <a :href="'/shop/product/' + product.link + '.html'" class="box is-full-height no-arrow">
                             <figure class="image">
                                 <img :src="product.imgLink" :alt="product.title">
                             </figure>
