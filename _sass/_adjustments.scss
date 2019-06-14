@@ -49,6 +49,12 @@ p {
     font-weight: 500;
 }
 
+.menu-list {
+    & li > a {
+        color: #647687;
+    }
+}
+
 .footer a {
     display: block;
     margin: 1rem 0;

@@ -226,7 +226,6 @@
             }
         }
     }
-
     &:hover {
         &::before {
             opacity: 0.7;
@@ -240,4 +239,23 @@
 
 .is-full-height {
     height: 100%;
+}
+
+.is-search {
+    margin: 15% 0;
+    input {
+    transition: border .1s linear;
+        &:hover {
+            border: 2px solid $primary;
+        }
+
+        &:focus {
+            border: 2px solid $primary;
+        }
+    }
+    .navbar-burger {
+        position: absolute;
+        left: 0;
+        top: $navbar-height + 1rem;
+    }
 }

@@ -1,0 +1,59 @@
+---
+layout: app
+permalink: /shop
+navbar-class: is-slim
+javascript: <script defer src="/assets/js/search.js"></script>
+---
+<div class="navbar-background"></div>
+<section class="section is-search" id="searchbar" :class="{ 'is-marginless': search }">
+    <div class="columns">
+        <a role="button" class="navbar-burger no-arrow is-flex has-text-primary" aria-label="menu" aria-expanded="false"
+            @click="showMenu = !showMenu" :class="{ 'is-active': showMenu }">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="column is-3 is-hidden" :class="{ unhide: showMenu }">
+            <aside class="menu">
+                <p class="menu-label has-text-success">Laktose</p>
+                <ul class="menu-list">
+                    <li><a class="no-arrow" @click="{ search = 'Laktose Prävention' }">Prävention</a></li>
+                    <li><a class="no-arrow">...</a></li>
+                </ul>
+                <p class="menu-label has-text-success">Tierhaare</p>
+                <p class="menu-label has-text-success">Pollen</p>
+                <p class="menu-label has-text-success">Gluten</p>
+            </aside>
+        </div>
+        <div class="column">
+            <h1 class="title has-text-centered">Was suchen sie bei <span class="has-text-primary">AllergieAid</span>?
+            </h1>
+            <form>
+                <div class="field">
+                    <input type="text" class="input is-rounded is-medium" autofocus v-model="search">
+                </div>
+                <div class="field has-text-centered">
+                    <button class="button is-primary is-large" :class="{ 'is-hidden': search }"
+                        type="submit">Suchen</button>
+                </div>
+                <p class="title is-hidden has-margin-top" :class="{ unhide: search }">Suchergebnisse für: <span
+                        class="has-text-success">{% raw %}{{ search }}{% endraw %}</span></p>
+            </form>
+            <div class="is-hidden" :class="{ unhide: search }">
+                <div class="columns has-margin-top is-multiline">
+                    {% raw %}
+                    <div class="column is-4-desktop is-marginless" v-for="product in searchedProducts">
+                        <a :href="product.link" class="box is-full-height no-arrow">
+                            <figure class="image">
+                                <img :src="product.imgLink" :alt="product.title">
+                            </figure>
+                            <p class="is-uppercase has-margin-top-small has-text-centered is-size-5 has-text-success">
+                                {{ product.title }}</p>
+                        </a>
+                    </div>
+                    {% endraw %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
