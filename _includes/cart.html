@@ -1,0 +1,34 @@
+<div class="cart" id="cart">
+    <div class="button is-success is-large is-hidden" :class="{ unhide: showButton }" @click="showCart = true"><span
+            class="icon"><i class="fas fa-shopping-cart"></i></span>
+    </div>
+    <div class="quickview" :class="{ 'is-active': showCart }">
+        <div class="quickview-header">
+            <p class="title is-uppercase">Warenkorb</p>
+            <span class="delete" data-dismiss="quickview" @click="showCart = false"></span>
+        </div>
+
+        <div class="quickview-body">
+            <div class="quickview-block">
+                <section class="section">
+                    {% raw %}
+                    <article class="media" v-for="item in items">
+                        <div class="media-content">
+                            <div class="content">
+                                <p>{{ item }}</p>
+                            </div>
+                        </div>
+                        <div class="media-right">
+                            <a class="no-arrow has-text-primary" @click="removeItem(item)"><span class="icon"><i class="fa fa-times"></i></span></a>
+                        </div>
+                    </article>
+                    {% endraw %}
+                </section>
+            </div>
+        </div>
+
+        <div class="quickview-footer">
+            <a href="#">Zur Kasse</a>
+        </div>
+    </div>
+</div>

@@ -259,3 +259,13 @@
         top: $navbar-height + 1rem;
     }
 }
+
+.cart {
+    > .button {
+        position: fixed;
+        right: .5rem;
+        bottom: 1rem;
+        border-radius: 10rem;
+        font-size: 2rem,
+    }
+}

@@ -23,3 +23,35 @@ var disclaimer = new Vue({
         }
     }
 });
+
+var cart = new Vue({
+    el: '#cart',
+    data: {
+        showButton: false,
+        showCart: false,
+        items: null,
+    },
+    methods: {
+        removeItem(item) {
+            var array = JSON.parse($cookies.get('cart'));
+            array.splice(array.indexOf(item), 1);
+            this.items.splice(this.items.indexOf(item), 1);
+            if(array.length > 0) {
+                $cookies.set('cart', JSON.stringify(array));
+            } else {
+                $cookies.remove('cart');
+                this.showButton = false;
+                this.showCart = false;
+            }
+        },
+        getItems() {
+            if($cookies.isKey('cart')) {
+                return JSON.parse($cookies.get('cart'));
+            }
+        }
+    },
+    beforeMount() {
+        this.showButton = $cookies.isKey('cart');
+        this.items = this.getItems();
+    }
+});

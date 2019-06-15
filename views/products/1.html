@@ -4,6 +4,7 @@ permalink: /shop/product/1
 product_name: Lactohelp
 product_id: 105385-34
 product_img: /assets/img/product_1.png
+javascript: <script defer src="/assets/js/cookie.js"></script>
 ---
 <p>Mit LactoHelp können Sie Ihr Wohlbefinden steigern und müssen Ihre Essgewohnheiten nicht einschränken.</p>
 <br>
@@ -12,12 +13,13 @@ product_img: /assets/img/product_1.png
 <br>
 <p>Somit kann nach der Einnahme jede beliebige Mahlzeit konsumiert werden ohne Angst vor den
     üblichen Beschwerden zu haben.</p>
-<table class="table has-margin-top is-fullwidth is-hoverable is-striped">
+<table class="table has-margin-top is-fullwidth is-hoverable is-striped" id="cookie">
     <thead>
         <tr>
             <th>Name</th>
             <th>Einheit</th>
             <th>Größe</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -25,21 +27,25 @@ product_img: /assets/img/product_1.png
             <td>Lactohelp Tester</td>
             <td>[ml]</td>
             <td>10</td>
+            <td><a href="{{ site.data.urls.shop }}" @click="addToCookie('cart', 'Lactohelp Tester')">In den Warenkorb</a></td>
         </tr>
         <tr>
             <td>Lactohelp 50</td>
             <td>[ml]</td>
             <td>50</td>
+            <td><a href="{{ site.data.urls.shop }}" @click="addToCookie('cart', 'Lactohelp 50')">In den Warenkorb</a></td>
         </tr>
         <tr>
             <td>Lactohelp 150</td>
             <td>[ml]</td>
             <td>150</td>
+            <td><a href="{{ site.data.urls.shop }}" @click="addToCookie('cart', 'Lactohelp 150')">In den Warenkorb</a></td>
         </tr>
         <tr>
             <td>Lactohelp Doctor</td>
             <td>[ml]</td>
             <td>900</td>
+            <td><a href="{{ site.data.urls.shop }}" @click="addToCookie('cart', 'Lactohelp 900')">In den Warenkorb</a></td>
         </tr>
     </tbody>
 </table>
