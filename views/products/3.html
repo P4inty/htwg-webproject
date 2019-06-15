@@ -15,39 +15,50 @@ javascript: <script defer src="/assets/js/cookie.js"></script>
     und wirkt bei nur bei einmal täglicher Einnahme bis zu 24 Stunden.</p>
 <br>
 <p>Damit können Sie wieder unbesorgt mit Ihren Haustieren Zeit verbringen.</p>
-<table class="table has-margin-top is-fullwidth is-hoverable is-striped" id="cookie">
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Einheit</th>
-            <th>Größe</th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Hairresist Tester</td>
-            <td>[Tabletten]</td>
-            <td>5</td>
-            <td><a href="{{ site.data.urls.shop }}" @click="addToCookie('cart', 'Hairresist Tester')">In den Warenkorb</a></td>
-        </tr>
-        <tr>
-            <td>Hairresist Pocket</td>
-            <td>[Tabletten]</td>
-            <td>30</td>
-            <td><a href="{{ site.data.urls.shop }}" @click="addToCookie('cart', 'Hairresist Pocket')">In den Warenkorb</a></td>
-        </tr>
-        <tr>
-            <td>Hairresist Depot</td>
-            <td>[Tabletten]</td>
-            <td>250</td>
-            <td><a href="{{ site.data.urls.shop }}" @click="addToCookie('cart', 'Hairresist Depot')">In den Warenkorb</a></td>
-        </tr>
-        <tr>
-            <td>Hairresist XXL</td>
-            <td>[Tabletten]</td>
-            <td>2500</td>
-            <td><a href="{{ site.data.urls.shop }}" @click="addToCookie('cart', 'Hairresist XXL')">In den Warenkorb</a></td>
-        </tr>
-    </tbody>
-</table>
+
+<div id="cookie">
+    <div class="notification is-danger has-margin-top-small is-hidden" :class="{ unhide: !canSetCookie() }">
+        <p class="has-text-white">Um Gegenstände in den Warenkorb legen zu können müssen Cookies akzeptiert werden. Bei
+            Ihnen sind diese nicht aktiv!</p>
+    </div>
+    <table class="table has-margin-top is-fullwidth is-hoverable is-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Einheit</th>
+                <th>Größe</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Hairresist Tester</td>
+                <td>[Tabletten]</td>
+                <td>5</td>
+                <td><a href="{{ site.data.urls.shop }}" @click="addToCookie('cart', 'Hairresist Tester')">In den
+                        Warenkorb</a></td>
+            </tr>
+            <tr>
+                <td>Hairresist Pocket</td>
+                <td>[Tabletten]</td>
+                <td>30</td>
+                <td><a href="{{ site.data.urls.shop }}" @click="addToCookie('cart', 'Hairresist Pocket')">In den
+                        Warenkorb</a></td>
+            </tr>
+            <tr>
+                <td>Hairresist Depot</td>
+                <td>[Tabletten]</td>
+                <td>250</td>
+                <td><a href="{{ site.data.urls.shop }}" @click="addToCookie('cart', 'Hairresist Depot')">In den
+                        Warenkorb</a></td>
+            </tr>
+            <tr>
+                <td>Hairresist XXL</td>
+                <td>[Tabletten]</td>
+                <td>2500</td>
+                <td><a href="{{ site.data.urls.shop }}" @click="addToCookie('cart', 'Hairresist XXL')">In den
+                        Warenkorb</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -14,39 +14,53 @@ javascript: <script defer src="/assets/js/cookie.js"></script>
 <br>
 <p>Somit kann nach der Einnahme jede beliebige Mahlzeit konsumiert werden ohne Angst vor den
     üblichen Beschwerden zu haben.</p>
-<table class="table has-margin-top is-fullwidth is-hoverable is-striped" id="cookie">
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Einheit</th>
-            <th>Größe</th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Lactohelp Tester</td>
-            <td>[ml]</td>
-            <td>10</td>
-            <td><a href="{{ site.data.urls.shop }}" @click="addToCookie('cart', 'Lactohelp Tester')">In den Warenkorb</a></td>
-        </tr>
-        <tr>
-            <td>Lactohelp 50</td>
-            <td>[ml]</td>
-            <td>50</td>
-            <td><a href="{{ site.data.urls.shop }}" @click="addToCookie('cart', 'Lactohelp 50')">In den Warenkorb</a></td>
-        </tr>
-        <tr>
-            <td>Lactohelp 150</td>
-            <td>[ml]</td>
-            <td>150</td>
-            <td><a href="{{ site.data.urls.shop }}" @click="addToCookie('cart', 'Lactohelp 150')">In den Warenkorb</a></td>
-        </tr>
-        <tr>
-            <td>Lactohelp Doctor</td>
-            <td>[ml]</td>
-            <td>900</td>
-            <td><a href="{{ site.data.urls.shop }}" @click="addToCookie('cart', 'Lactohelp 900')">In den Warenkorb</a></td>
-        </tr>
-    </tbody>
-</table>
+
+<div id="cookie">
+    <div class="notification is-danger has-margin-top-small is-hidden" :class="{ unhide: !canSetCookie() }">
+        <p class="has-text-white">Um Gegenstände in den Warenkorb legen zu können müssen Cookies akzeptiert werden. Bei
+            Ihnen sind diese nicht aktiv!</p>
+    </div>
+    <table class="table has-margin-top is-fullwidth is-hoverable is-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Einheit</th>
+                <th>Größe</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Lactohelp Tester</td>
+                <td>[ml]</td>
+                <td>10</td>
+                <td><a href="{{ site.data.urls.shop }}" @click="addToCookie('cart', 'Lactohelp Tester')">In den
+                        Warenkorb</a></td>
+            </tr>
+            <tr>
+                <td>Lactohelp 50</td>
+                <td>[ml]</td>
+                <td>50</td>
+                <td><a href="{{ site.data.urls.shop }}" @click="addToCookie('cart', 'Lactohelp 50')">In den
+                        Warenkorb</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Lactohelp 150</td>
+                <td>[ml]</td>
+                <td>150</td>
+                <td><a href="{{ site.data.urls.shop }}" @click="addToCookie('cart', 'Lactohelp 150')">In den
+                        Warenkorb</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Lactohelp Doctor</td>
+                <td>[ml]</td>
+                <td>900</td>
+                <td><a href="{{ site.data.urls.shop }}" @click="addToCookie('cart', 'Lactohelp 900')">In den
+                        Warenkorb</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
