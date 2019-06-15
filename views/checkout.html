@@ -1,0 +1,133 @@
+---
+layout: app
+title: Kasse |
+permalink: /checkout
+navbar-class: is-slim
+javascript: <script defer src="/assets/js/checkout.js"></script>
+---
+<div class="navbar-background"></div>
+<div class="grey-element">
+    <img src="{{ site.data.links.img.grey-element }}" alt="Graues Hintergrundelement">
+</div>
+<section class="section">
+    <h1 class="title has-margin-top has-text-centered">Kasse</h1>
+    <div class="columns has-margin-top-small is-desktop" id="checkout">
+        <div class="column">
+            <p class="is-size-5 is-uppercase">Ihr Warenkorb</p>
+            {% raw %}
+            <div class="has-margin-top-small">
+                <div class="media" v-for="item in items">
+                    <div class="media-content">
+                        <div class="content">
+                            <p>{{ item }}</p>
+                        </div>
+                    </div>
+                    <div class="media-right columns">
+                        <div class="column is-offset-4">
+                            <input type="number" class="input" value="1">
+                        </div>
+                        <div class="column is-4 has-text-right">
+                            <a class="no-arrow has-text-primary" @click="removeItem(item)"><span class="icon"><i
+                                        class="fa fa-times"></i></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endraw %}
+        </div>
+        <div class="is-divider-vertical"></div>
+        <div class="column">
+            <p class="is-size-5 is-uppercase">Ihre Daten</p>
+            <form action="{{ site.data.links.urls.success }}" class="has-margin-top-small">
+                <div class="field">
+                    <div class="control has-icons-left has-icons-right">
+                        <input type="text" class="input" placeholder="Name" name="name" aria-label="Name" required>
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-user"></i>
+                        </span>
+                        <span class="icon is-small is-right">
+                            <i class="fas fa-asterisk"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="control has-icons-left has-icons-right">
+                        <input type="mail" class="input" placeholder="Email Adresse" name="mail"
+                            aria-label="Email Adresse" required>
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-envelope"></i>
+                        </span>
+                        <span class="icon is-small is-right">
+                            <i class="fas fa-asterisk"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="control has-icons-left has-icons-right">
+                        <input type="mail" class="input" placeholder="Straße & Hausnummer" name="text"
+                            aria-label="Straße und Hausnummer" required>
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-road"></i>
+                        </span>
+                        <span class="icon is-small is-right">
+                            <i class="fas fa-asterisk"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="control has-icons-left has-icons-right">
+                        <input type="mail" class="input" placeholder="Postleitzahl" name="text"
+                            aria-label="Postleitzahl" required>
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-address-book"></i>
+                        </span>
+                        <span class="icon is-small is-right">
+                            <i class="fas fa-asterisk"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="control has-icons-left has-icons-right">
+                        <input type="mail" class="input" placeholder="Ort" name="text" aria-label="Ort" required>
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-flag"></i>
+                        </span>
+                        <span class="icon is-small is-right">
+                            <i class="fas fa-asterisk"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="control has-icons-left">
+                        <input type="phone" class="input" placeholder="Telefonnummer" name="phone"
+                            aria-label="Telefonnummer">
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-phone"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="field">
+                    <textarea class="textarea" placeholder="Haben Sie noch Bemerkungen?" name="message"
+                        aria-label="Bemerkungen"></textarea>
+                </div>
+                <div class="is-divider"></div>
+                <div class="field">
+                    <p class="has-text-centered is-size-7">Mit der Verwendung dieser Form stimmen Sie der Verarbeitung
+                        und
+                        der Speicherung Ihrer Daten durch diese Webseite zu. Bitte lesen Sie unsere <a
+                            href="#">Datenschutz
+                            Richtlinien</a> für mehr Informationen darüber, wie wir Ihre Daten verarbeiten und nutzen.
+                    </p>
+                </div>
+                <div class="field has-text-centered">
+                    <input class="is-checkradio" type="checkbox" id="data_privacy" name="data_privacy"
+                        aria-label="Datenschutz zustimmen">
+                    <label for="data_privacy">Ich stimme zu</label>
+                </div>
+                <div class="field has-text-centered">
+                    <button class="button is-primary" type="submit" aria-label="Absenden" @click="clear()">Bestellung abschicken</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

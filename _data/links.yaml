@@ -28,3 +28,5 @@ urls:
   privacy: /privacy.html
   news: /news.html
   shop: /shop.html
+  checkout: /checkout.html
+  success: /success.html
