@@ -1,6 +1,7 @@
 css: /assets/css/app.css
 js: /assets/js/main.js
 carousel-js: /assets/js/carousel.js
+lazysizes-js: /assets/js/lazysizes.js
 font-awesome: /assets/css/font-awesome.min.css
 img:
   logo: /assets/img/logo.svg
