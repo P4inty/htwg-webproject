@@ -57,7 +57,7 @@ javascript: <script defer src="/assets/js/search.js"></script>
                     <div class="column is-4-desktop is-marginless" v-for="product in searchedProducts">
                         <a :href="'/shop/product/' + product.link + '.html'" class="box is-full-height no-arrow">
                             <figure class="image">
-                                <img :src="product.imgLink" :alt="product.title">
+                                <img :src="product.imgLink" class="lazyload" :alt="product.title">
                             </figure>
                             <p class="is-uppercase has-margin-top-small has-text-centered is-size-5 has-text-success">
                                 {{ product.title }}</p>
