@@ -257,6 +257,9 @@
         position: absolute;
         left: 0;
         top: $navbar-height + 1rem;
+        span {
+            height: 2px;
+        }
     }
 }
 

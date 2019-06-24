@@ -1,0 +1,62 @@
+---
+layout: product_page
+permalink: /shop/product/7
+title: Pollgo | Produkte |
+product_name: Pollgo
+product_id: 185290-91
+product_img: /assets/img/product_7.png
+javascript: <script defer src="/assets/js/cookie.js"></script>
+---
+<p>Mit PollGo können Sie die Symptome ihres Heuschnupfens lindern oder sogar ganz verschwinden lassen.</p>
+<br>
+<p>Die meisten Medikamente machen müde und sind für den Körper noch zusätzliche Arbeit.</p>
+<br>
+<p>Unser Produkt stärkt dagegen den Organismus zusätzlich, statt die Symptome einfach nur zu unterdrücken.</p>
+<br>
+<p>Somit tritt ihre Allergie nicht mehr so stark oder in den meisten Fällen gar nicht mehr auf.</p>
+<div id="cookie">
+    <div class="notification is-danger has-margin-top-small is-hidden" :class="{ unhide: !canSetCookie() }">
+        <p class="has-text-white">Um Gegenstände in den Warenkorb legen zu können müssen Cookies akzeptiert werden. Bei
+            Ihnen sind diese nicht aktiv!</p>
+    </div>
+    <table class="table has-margin-top is-fullwidth is-hoverable is-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Einheit</th>
+                <th>Größe</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Pollgo Tester</td>
+                <td>[Tabletten]</td>
+                <td>5</td>
+                <td><a href="{{ site.data.urls.shop }}" @click="addToCookie('cart', 'Pollgo Tester')">In den
+                        Warenkorb</a></td>
+            </tr>
+            <tr>
+                <td>Pollgo Travel</td>
+                <td>[Tabletten]</td>
+                <td>30</td>
+                <td><a href="{{ site.data.urls.shop }}" @click="addToCookie('cart', 'Pollgo Travel')">In den
+                        Warenkorb</a></td>
+            </tr>
+            <tr>
+                <td>Pollgo Depot</td>
+                <td>[Tabletten]</td>
+                <td>250</td>
+                <td><a href="{{ site.data.urls.shop }}" @click="addToCookie('cart', 'Pollgo Depot')">In den
+                        Warenkorb</a></td>
+            </tr>
+            <tr>
+                <td>Pollgo Doctor</td>
+                <td>[Tabletten]</td>
+                <td>2500</td>
+                <td><a href="{{ site.data.urls.shop }}" @click="addToCookie('cart', 'Pollgo Doctor')">In den
+                        Warenkorb</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

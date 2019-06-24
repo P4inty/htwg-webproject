@@ -1,0 +1,61 @@
+---
+layout: product_page
+permalink: /shop/product/6
+title: Hairprevent | Produkte |
+product_name: Hairprevent
+product_id: 195205-62
+product_img: /assets/img/product_6.png
+javascript: <script defer src="/assets/js/cookie.js"></script>
+---
+<p>Unser Produkt hilft Ihnen, sollten sie einmal eine allergische Reaktion auf Tierhaare haben.</p>
+<br>
+<p>Sie müssen einfach nur eine Tablette bei ersten Anzeichen nehmen um weitere Reaktionen komplett zu verhindern.</p>
+<br>
+<p>So bekommen sie ihre Allergie unter Kontrolle und müssen nicht dauernd Angst haben, sollten Sie einmal in direkten
+    Kontakt mit Tieren kommen.</p>
+<div id="cookie">
+    <div class="notification is-danger has-margin-top-small is-hidden" :class="{ unhide: !canSetCookie() }">
+        <p class="has-text-white">Um Gegenstände in den Warenkorb legen zu können müssen Cookies akzeptiert werden. Bei
+            Ihnen sind diese nicht aktiv!</p>
+    </div>
+    <table class="table has-margin-top is-fullwidth is-hoverable is-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Einheit</th>
+                <th>Größe</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Hairprevent Tester</td>
+                <td>[Tabletten]</td>
+                <td>5</td>
+                <td><a href="{{ site.data.urls.shop }}" @click="addToCookie('cart', 'Hairprevent Tester')">In den
+                        Warenkorb</a></td>
+            </tr>
+            <tr>
+                <td>Hairprevent Pocket</td>
+                <td>[Tabletten]</td>
+                <td>30</td>
+                <td><a href="{{ site.data.urls.shop }}" @click="addToCookie('cart', 'Hairprevent Pocket')">In den
+                        Warenkorb</a></td>
+            </tr>
+            <tr>
+                <td>Hairprevent Depot</td>
+                <td>[Tabletten]</td>
+                <td>250</td>
+                <td><a href="{{ site.data.urls.shop }}" @click="addToCookie('cart', 'Hairprevent Depot')">In den
+                        Warenkorb</a></td>
+            </tr>
+            <tr>
+                <td>Hairprevent XXL</td>
+                <td>[Tabletten]</td>
+                <td>2500</td>
+                <td><a href="{{ site.data.urls.shop }}" @click="addToCookie('cart', 'Hairprevent XXL')">In den
+                        Warenkorb</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

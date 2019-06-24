@@ -14,7 +14,6 @@ var cookie = new Vue({
             if(!array.includes(value)) {
                 array.push(value);
             }
-            console.log(array);
             this.setCookie(key, JSON.stringify(array));
         },
         canSetCookie() {

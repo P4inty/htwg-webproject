@@ -1,0 +1,62 @@
+---
+layout: product_page
+permalink: /shop/product/5
+title: Lactostop | Produkte |
+product_name: Lactostop
+product_id: 112052-37
+product_img: /assets/img/product_5.png
+javascript: <script defer src="/assets/js/cookie.js"></script>
+---
+<p>Mit LactoStop können Sie auch bis zu einer Stunde nach der Einnahme von lactosehaltigen Lebensmitteln die üblichen
+    Symptome verhindern.</p>
+<br>
+<p>Also sollten Sie vergessen haben während der Mahlzeit eine Tablette einzunehmen, können Sie dies auch noch getrost
+    nachholen.</p>
+<br>
+<p>Die Lactose wird im Nachhinein von den Tabletten gestoppt und ist gut verträglich ohne Nebenwirkungen.</p>
+<div id="cookie">
+    <div class="notification is-danger has-margin-top-small is-hidden" :class="{ unhide: !canSetCookie() }">
+        <p class="has-text-white">Um Gegenstände in den Warenkorb legen zu können müssen Cookies akzeptiert werden. Bei
+            Ihnen sind diese nicht aktiv!</p>
+    </div>
+    <table class="table has-margin-top is-fullwidth is-hoverable is-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Einheit</th>
+                <th>Größe</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Lactostop Tester</td>
+                <td>[Tabletten]</td>
+                <td>5</td>
+                <td><a href="{{ site.data.urls.shop }}" @click="addToCookie('cart', 'Lactostop Tester')">In den
+                        Warenkorb</a></td>
+            </tr>
+            <tr>
+                <td>Lactostop Pickup</td>
+                <td>[Tabletten]</td>
+                <td>25</td>
+                <td><a href="{{ site.data.urls.shop }}" @click="addToCookie('cart', 'Lactostop Pickup')">In den
+                        Warenkorb</a></td>
+            </tr>
+            <tr>
+                <td>Lactostop Store</td>
+                <td>[Tabletten]</td>
+                <td>250</td>
+                <td><a href="{{ site.data.urls.shop }}" @click="addToCookie('cart', 'Lactostop Store')">In den
+                        Warenkorb</a></td>
+            </tr>
+            <tr>
+                <td>Lactostop Giant</td>
+                <td>[Tabletten]</td>
+                <td>2500</td>
+                <td><a href="{{ site.data.urls.shop }}" @click="addToCookie('cart', 'Lactostop Giant')">In den
+                        Warenkorb</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

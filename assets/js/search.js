@@ -23,13 +23,37 @@ var search = new Vue({
                 'Pollblock',
                 'assets/img/product_2.png',
                 '2',
-                'Pollen'
+                'Pollen Prävention'
             ),
             new Product(
                 'Hairresist',
                 'assets/img/product_3.png',
                 '3',
-                'Tierhaare'
+                'Tierhaare Prävention'
+            ),
+            new Product(
+                'Glutaway',
+                'assets/img/product_4.png',
+                '4',
+                'Gluten Prävention'
+            ),
+            new Product(
+                'Lactostop',
+                'assets/img/product_5.png',
+                '5',
+                'Laktose Akut'
+            ),
+            new Product(
+                'Hairprevent',
+                'assets/img/product_6.png',
+                '6',
+                'Tierhaare Akut'
+            ),
+            new Product(
+                'Pollgo',
+                'assets/img/product_7.png',
+                '7',
+                'Pollen Akut'
             )
         ],
     },
